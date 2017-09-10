@@ -1,0 +1,37 @@
+{%  extends '/templates/app.twig' %}
+
+{% block content %} 
+
+<div class="col-md-6 ml-md-auto mr-md-auto">
+<div class="card border-primary" >
+  <h4 class="card-header text-primary">Login</h4>
+  <div class="card-body text-primary">
+
+	<form action="{{ path.for('auth.signup') }}" method="post" autocomplete="off">
+	  <div class="form-group">
+	    <label for="email">Email</label>
+	    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="twój@email.com">
+	  </div>
+	  <div class="form-group">
+	    <label for="name">Nazwa użytkownika</label>
+	    <input type="name" name="name" class="form-control" id="name" aria-describedby="namelHelp" placeholder="nazwa">
+	  </div>
+	  <div class="form-group">
+	    <label for="password">Hasło</label>
+	    <input type="password" name="password" class="form-control" id="password" placeholder="hasło">
+	  </div>
+	  <div class="form-check">
+	    <label class="form-check-label">
+	      <input type="checkbox" class="form-check-input">
+	      Zapamiętaj mnie
+	    </label>
+	  </div>
+	  <button type="submit" class="btn btn-primary btn-block">Zaloguj</button>
+
+	</form>
+
+  </div>
+</div>
+</div>
+	    	
+{% endblock %} 
